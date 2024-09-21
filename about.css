@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: 'Roboto','Courier New', Courier, monospace;
+
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.container div.nome-imagem{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  vertical-align: middle;
+  margin: auto;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.header h1 {
+  margin: auto;
+  font-size: 3rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+.button {
+  background: #f4b41a;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.about, .skills, .experience, .contact {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1.1rem;
+}
+
+/* .job {
+  margin: 20px 0;
+
+  font-size: 17px;
+  color: burlywood;
+  box-shadow: 2px 2px 4px #8b8b9e;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  justify-content: center;
+} */
+.job {
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 17px;
+  color: #333; /* Cor de texto mais legível */
+  max-width: 50%;
+  background-color: #fdfd96; /* Cor de fundo de Post-it (amarelo claro) */
+  border: 1px solid #f1d93c; /* Borda sutil */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8); /* Sombra mais sutil */
+  position: relative;
+  justify-content: center;
+}
+
+/* Cantinho dobrado no estilo post-it */
+.job::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-top: 1px solid #f1d93c;
+  border-right: 1px solid #f1d93c;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  box-shadow: -3px -3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .job {
+    font-size: 15px; /* Texto um pouco menor */
+    padding: 15px;
+    max-width: 90%; /* Reduzir a largura em telas menores */
+    margin: 10px auto; /* Centralizar em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .job {
+    font-size: 14px; /* Texto ainda menor em telas bem pequenas */
+    padding: 10px;
+    max-width: 95%;
+  }
+}
+
+.job h3 {
+  color: #f4b41a;
+}
+
+.contact a {
+  color: #f4b41a;
+  text-decoration: none;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}

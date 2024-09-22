@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,20 +13,25 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 50%;
   margin: auto;
   overflow: hidden;
 }
 
 .container div.nome-imagem{
-  display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
+}
+
+div.nome-imagem h1{
+
+}
+
+section.about p{
+  text-align: justify;
 }
 
 .profile-img {
   vertical-align: middle;
-  margin: auto;
   max-width: 200px;
   width: 100%;
   height: auto;
@@ -76,24 +84,12 @@ body {
   font-size: 1.1rem;
 }
 
-/* .job {
-  margin: 20px 0;
-
-  font-size: 17px;
-  color: burlywood;
-  box-shadow: 2px 2px 4px #8b8b9e;
-  max-width: 90%;
-  padding: 20px;
-  background-color: #fff;
-  margin-top: 20px;
-  justify-content: center;
-} */
-.job {
+.job, .education {
   margin: 20px auto;
   padding: 20px;
   font-size: 17px;
   color: #333; /* Cor de texto mais legível */
-  max-width: 50%;
+  max-width: 70%;
   background-color: #fdfd96; /* Cor de fundo de Post-it (amarelo claro) */
   border: 1px solid #f1d93c; /* Borda sutil */
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8); /* Sombra mais sutil */
@@ -102,7 +98,7 @@ body {
 }
 
 /* Cantinho dobrado no estilo post-it */
-.job::before {
+.job::before, .education::before {
   content: "";
   position: absolute;
   top: 0;
@@ -119,7 +115,7 @@ body {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .job {
+  .job, .education {
     font-size: 15px; /* Texto um pouco menor */
     padding: 15px;
     max-width: 90%; /* Reduzir a largura em telas menores */
@@ -128,15 +124,15 @@ body {
 }
 
 @media (max-width: 480px) {
-  .job {
+  .job, .education {
     font-size: 14px; /* Texto ainda menor em telas bem pequenas */
     padding: 10px;
     max-width: 95%;
   }
 }
 
-.job h3 {
-  color: #f4b41a;
+.job h3, .education h3 {
+  color: #0a0a09;
 }
 
 .contact a {
@@ -153,4 +149,48 @@ body {
 
 .footer p {
   margin: 0;
+}
+
+
+hr {
+  color: #000;
+}
+
+/* Container da barra de progresso */
+.progress-container {
+max-width: 300px;
+width: 80%;
+background-color: #e0e0df;
+border-radius: 25px;
+margin: auto;
+box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de progresso */
+.progress-bar {
+height: 30px;
+width: 0; /* Largura inicial em 0 para animar */
+background-color: #4caf50;
+border-radius: 25px;
+transition: width 0.5s ease-in-out;
+}
+
+/* Texto de progresso */
+.progress-text {
+text-align: center;
+color: #fff;
+line-height: 30px;
+font-weight: bold;
+}
+
+
+
+#git, #front, #leader {
+  width: 60%;
+}
+#sql, #java, #atest{
+  width: 80%;
+}
+#ftest {
+  width: 100%;
 }
